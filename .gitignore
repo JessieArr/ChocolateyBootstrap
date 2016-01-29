@@ -1,0 +1,5 @@
+VisualStudio/OfflineCache/*
+VisualStudio/packages/*
+VisualStudio/Standalone Profiler/*
+VisualStudio/vs_community.exe
+VisualStudio/autorun.inf
