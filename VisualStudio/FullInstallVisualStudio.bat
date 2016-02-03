@@ -23,4 +23,4 @@ if not exist AdminDeployment.xml (
 	@echo | call InstallVSColorOutput.bat
 	@echo Done Installing VSColorOutput!
 )
-
+ 
