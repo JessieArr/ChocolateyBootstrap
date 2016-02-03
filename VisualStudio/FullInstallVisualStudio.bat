@@ -6,10 +6,9 @@ if not exist AdminDeployment.xml (
 	@echo Creating Admin Deployment File...
 	@echo | call CreateAdminFile.bat
 	@echo Please Edit Admin Deployment File Before Running Visual Studio Install Script.
-) else (
-	@echo Installing Visual Studio...
+) else (	
 	@echo | call InstallVisualStudio.bat
-	@echo Done Installing Visual Studio!
+	if %ERRORLEVEL% NEQ 0 exit /b 1
 
 	@echo Installing ReSharper...
 	@echo | call InstallReSharper.bat
