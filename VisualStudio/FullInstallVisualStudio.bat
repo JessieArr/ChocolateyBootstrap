@@ -6,7 +6,7 @@ if not exist AdminDeployment.xml (
 	@echo Creating Admin Deployment File...
 	@echo | call CreateAdminFile.bat
 	@echo Please Edit Admin Deployment File Before Running Visual Studio Install Script.
-)else(
+) else (
 	@echo Installing Visual Studio...
 	@echo | call InstallVisualStudio.bat
 	@echo Done Installing Visual Studio!
