@@ -1,7 +1,12 @@
+@echo off
+set errorno=0
+@echo Installing Visual Studio Network Image...
 vs_community_ENU.exe /CreateAdminFile %~dp0\AdminDeployment.xml /quiet
 if %ERRORLEVEL% NEQ 0 (
-	@echo ERROR: Failed to create AdminDeployment.xml file!
+	@echo ERROR: Failed to install Visual Studio Network Image! Error code: %ERRORLEVEL%
+	set errorno=1
 ) else (
-	@echo AdminDeployment.xml creation succeeded!
+	@echo Visual Studio Network Image installation succeeded!
 )
 pause
+exit /b %errorno%
